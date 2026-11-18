@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <section class="card" id="auth-card">
+      <h1>Student Portal</h1>
+      <p class="muted">Create an account or sign in</p>
+
+      <div class="tabs">
+        <button type="button" id="show-register" class="tab active">Register</button>
+        <button type="button" id="show-login" class="tab">Login</button>
+      </div>
+
+      <form id="register-form">
+        <label for="reg-name">Full name</label>
+        <input id="reg-name" type="text" maxlength="100" autocomplete="name" required>
+        <label for="reg-email">Email</label>
+        <input id="reg-email" type="email" autocomplete="email" required>
+        <label for="reg-password">Password</label>
+        <input id="reg-password" type="password" minlength="8" autocomplete="new-password" required>
+        <label for="reg-confirm">Confirm password</label>
+        <input id="reg-confirm" type="password" minlength="8" autocomplete="new-password" required>
+        <button class="primary" type="submit">Create account</button>
+      </form>
+
+      <form id="login-form" class="hidden">
+        <label for="login-email">Email</label>
+        <input id="login-email" type="email" autocomplete="email" required>
+        <label for="login-password">Password</label>
+        <input id="login-password" type="password" autocomplete="current-password" required>
+        <button class="primary" type="submit">Login</button>
+        <button class="link-button" type="button" id="forgot-password">Forgot password?</button>
+      </form>
+      <p id="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card hidden" id="dashboard">
+      <h1>Welcome!</h1>
+      <p id="welcome-text"></p>
+      <p class="muted">You are successfully logged in.</p>
+      <button class="primary" id="logout-button" type="button">Logout</button>
+    </section>
+  </main>
+</body>
+</html>
