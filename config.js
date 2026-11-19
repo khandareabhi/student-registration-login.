@@ -4,3 +4,4 @@
 window.SUPABASE_URL = "https://bidvdctnzmxpdcadppiw.supabase.co";
 window.SUPABASE_ANON_KEY = "sb_publishable_klJuw7dBsry_XMmVopHKvQ_NqSCMD_c"; 
 // this  database key is used 
+// for explnation in that do 
